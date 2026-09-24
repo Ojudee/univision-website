@@ -17,18 +17,38 @@ header{position:sticky;top:0;z-index:50;background:#061d41f7;backdrop-filter:blu
 .about{grid-template-columns:1fr 1fr;align-items:center;gap:65px}.about-img{height:470px;border-radius:28px;background:linear-gradient(135deg,#061d41,#0d7bea);position:relative;overflow:hidden}.about-img:after{content:"";position:absolute;inset:18%;border:1px solid #ffffff55;transform:skewY(-8deg)}.note{position:absolute;left:22px;bottom:22px;background:#fff;padding:20px;border-radius:16px;max-width:300px;z-index:2}
 .cards4{grid-template-columns:repeat(4,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:27px}.card ul{padding:0;list-style:none}.card li{padding:6px 0;border-bottom:1px solid #edf0f5;font-size:.86rem}.card li:before{content:"✓";color:var(--g);font-weight:900;margin-right:8px}
 .why{grid-template-columns:repeat(4,1fr)}.why .card{padding:25px}.num{color:var(--g);font-weight:900;font-size:1.4rem}
-.projects{grid-template-columns:repeat(3,1fr)}.project{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}.slider{position:relative;aspect-ratio:16/10;background:#0b2a55}.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}.slide.active{opacity:1}.slide img{width:100%;height:100%;object-fit:cover}.fallback{width:100%;height:100%;display:grid;place-items:center;color:#fff;font-weight:900}.arr{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:#061d41c7;color:#fff;font-size:1.5rem;z-index:3;cursor:pointer}.prev{left:10px}.next{right:10px}.count{position:absolute;right:10px;bottom:10px;background:#061d41cc;color:#fff;border-radius:20px;padding:4px 9px;font-size:.72rem;z-index:3}.dots{position:absolute;left:10px;bottom:13px;display:flex;gap:5px;z-index:3}.dot{width:7px;height:7px;border-radius:50%;background:#fff8}.dot.active{background:var(--g)}.pinfo{padding:22px}.tag{display:inline-block;background:#edf4ff;color:var(--b);font-weight:800;font-size:.7rem;padding:5px 9px;border-radius:99px;margin-right:5px}
+
+.projects{grid-template-columns:repeat(3,1fr)}
+.project{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.slider{position:relative;aspect-ratio:16/10;background:#0b2a55;overflow:hidden}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.slide.active{opacity:1;pointer-events:auto}
+.slide img{width:100%;height:100%;object-fit:cover}
+.fallback{width:100%;height:100%;display:grid;place-items:center;color:#fff;font-weight:900}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:#061d41c7;color:#fff;font-size:1.5rem;z-index:3;cursor:pointer}
+.arr:hover{background:#061d41}
+.prev{left:10px}.next{right:10px}
+.count{position:absolute;right:10px;bottom:10px;background:#061d41cc;color:#fff;border-radius:20px;padding:4px 9px;font-size:.72rem;z-index:3}
+.dots{position:absolute;left:10px;bottom:13px;display:flex;gap:5px;z-index:3}
+.dot{width:7px;height:7px;border-radius:50%;background:#fff8;cursor:pointer;display:block}
+.dot.active{background:var(--g)}
+.pinfo{padding:22px}
+.tag{display:inline-block;background:#edf4ff;color:var(--b);font-weight:800;font-size:.7rem;padding:5px 9px;border-radius:99px;margin-right:5px}
+
 .process{grid-template-columns:repeat(4,1fr);position:relative}.process:before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--g),var(--b))}.step{position:relative;z-index:1}.stepno{width:68px;height:68px;border:3px solid var(--g);border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:18px;box-shadow:0 0 0 9px var(--bg)}
 .prices{grid-template-columns:repeat(4,1fr)}.price{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px}.price.feature{border:2px solid var(--g)}.money{font-size:1.7rem;font-weight:900;color:var(--n);margin:12px 0}
 .team{grid-template-columns:repeat(4,1fr)}.person{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff}.photo{aspect-ratio:1;background:linear-gradient(135deg,#e3e9f0,#fafbfd);display:grid;place-items:center;text-align:center;color:#718096;font-weight:900}.pbody{padding:20px}.role{font-size:.72rem;color:var(--b);font-weight:900;text-transform:uppercase;letter-spacing:.1em}
 .cta{background:linear-gradient(135deg,var(--n),#0a4d9f);color:#fff;border-radius:30px;padding:55px}.cta p{color:#d7e0ee;max-width:700px}
 .contact{grid-template-columns:.8fr 1.2fr}.panel{background:var(--n);color:#fff;border-radius:28px;padding:35px}.panel p{color:#ccd7e7}.contactline{padding:13px 0;border-bottom:1px solid #ffffff18}.contactline a{color:#fff}form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 15px 40px #061d4112}.formgrid{grid-template-columns:1fr 1fr}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.8rem;font-weight:900}input,select,textarea{padding:12px;border:1px solid #d7dee8;border-radius:11px}textarea{min-height:130px}
 footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-columns:1.5fr 1fr 1fr 1fr}.foot a,.foot p{color:#aebbd0;font-size:.88rem}.bottom{border-top:1px solid #ffffff18;margin-top:35px;padding-top:18px;color:#7f91ad;font-size:.75rem;display:flex;justify-content:space-between}
+
 @media(max-width:1050px){.links{gap:14px}.cards4,.prices,.team{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}.disc-grid{grid-template-columns:repeat(2,1fr)}.disc-item:nth-child(2){border-right:0}.process{grid-template-columns:repeat(2,1fr)}.process:before{display:none}.foot{grid-template-columns:1.5fr 1fr 1fr}}
 @media(max-width:760px){.section{padding:70px 0}.menu{display:block}.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--n);padding:20px 4%;flex-direction:column;align-items:stretch}.links.open{display:flex}.hero-inner,.about,.contact{grid-template-columns:1fr}.hero-inner{padding:75px 0}.visual{height:330px}.disc{margin-top:0;padding-top:15px}.disc-grid,.cards4,.prices,.team,.projects,.why,.process,.formgrid,.foot{grid-template-columns:1fr}.disc-item{border-right:0;border-bottom:1px solid var(--line)}.head{display:block}.head>div:last-child{margin-top:15px}.field.full{grid-column:auto}.bottom{display:block}.cta{padding:40px 25px}}
 </style>
 </head>
+
 <body>
+
 <header><div class="container nav">
 <a class="brand" href="#home"><img src="images/logo/univision-logo.png" alt="Univision Design & Construction Ltd."></a>
 <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
@@ -63,7 +83,18 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <section class="section"><div class="container"><div class="head"><div><span class="ey">The Univision advantage</span><h2>Why One Multidisciplinary Team?</h2></div><p>Architecture, engineering and cost decisions work better when they are considered together.</p></div>
 <div class="grid why"><div class="card"><div class="num">01</div><h3>Better Coordination</h3><p>Connect architectural, engineering and cost considerations from the beginning.</p></div><div class="card"><div class="num">02</div><h3>Cost-Aware Design</h3><p>Consider design decisions alongside quantities and project costs.</p></div><div class="card"><div class="num">03</div><h3>Direct Professional Input</h3><p>Clients can work directly with the professionals involved in their project.</p></div><div class="card"><div class="num">04</div><h3>Practical Solutions</h3><p>Consider design, engineering, cost and buildability together.</p></div></div></div></section>
 
-<section class="section alt" id="projects"><div class="container"><div class="head"><div><span class="ey">Portfolio</span><h2>Selected Projects</h2></div><p></p></div><div class="grid projects" id="projectGrid"></div></div></section>
+<section class="section alt" id="projects">
+<div class="container">
+<div class="head">
+<div>
+<span class="ey">Portfolio</span>
+<h2>Our Projects</h2>
+</div>
+<p>Explore selected architectural projects and 3D visualizations by Univision Design & Construction Ltd.</p>
+</div>
+<div class="grid projects" id="projectGrid"></div>
+</div>
+</section>
 
 <section class="section" id="process"><div class="container"><div class="head"><div><span class="ey">How we work</span><h2>From Idea to Delivery</h2></div><p></p></div>
 <div class="grid process"><div class="step"><div class="stepno">01</div><h3>Discover</h3><p>Understand requirements, site, objectives, budget and expectations.</p></div><div class="step"><div class="stepno">02</div><h3>Design</h3><p>Develop architectural concepts and coordinate technical requirements.</p></div><div class="step"><div class="stepno">03</div><h3>Plan</h3><p>Coordinate engineering documents, quantities, costs and construction planning.</p></div><div class="step"><div class="stepno">04</div><h3>Deliver</h3><p>Support implementation, inspections and project delivery as applicable.</p></div></div></div></section>
@@ -75,8 +106,6 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 
 <div class="grid team"><div class="person"><img class="photo" src="images/team/member-1.png" alt="Ousman Fatty"><div class="pbody"><div class="role">Ousman Fatty</div><h3>Architect</h3><p>Ousman Fatty is an architecture professional focused on thoughtful design, practical solutions, and creating spaces that balance functionality, comfort, and visual appeal.</p></div></div><div class="person"><img class="photo" src="images/team/member-2.png" alt="Kawsu Ndure"><div class="pbody"><div class="role">Kawsu Ndure</div><h3>Architect</h3><p>Kawsu Ndure is an architecture professional with an interest in developing well-planned, functional, and visually engaging spaces tailored to each project's needs.</p></div></div><div class="person"><img class="photo" src="images/team/member-3.png" alt="Omar Darboe"><div class="pbody"><div class="role">Omar Darboe</div><h3>Quantity Surveyor</h3><p>Omar Darboe is a quantity surveying professional focused on cost planning, construction budgeting, and helping ensure projects are delivered efficiently and within established financial requirements.</p></div></div><div class="person"><img class="photo" src="images/team/member-4.png" alt="Muhammed Lamin Ndow"><div class="pbody"><div class="role">Muhammed Lamin Ndow</div><h3>Civil Engineer</h3><p>Muhammed Lamin Ndow is a civil engineering professional focused on practical construction solutions, structural considerations, and supporting the successful delivery of building and infrastructure projects.</p></div></div></div></div></section>
 
-
-
 <section class="section"><div class="container"><div class="cta"><span class="ey" style="color:#f0c45a">Start a conversation</span><h2>Have a Project in Mind?</h2><p>Let's discuss your idea and determine the right professional approach for your project.</p><a class="btn primary" href="#contact">Start Your Project</a></div></div></section>
 
 <section class="section alt" id="contact"><div class="container grid contact"><div class="panel"><span class="ey" style="color:#f0c45a">Contact Univision</span><h2>Let's Talk About Your Project.</h2><p>Whether you are developing an idea, preparing drawings, planning your budget or ready to build, talk to our multidisciplinary team.</p><div class="contactline"><b>877708673</b></div><div class="contactline"><b>835925944</b></div><div class="contactline"><b>833046635</b></div><div class="contactline"><b>833775792</b></div></div>
@@ -85,6 +114,7 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <footer><div class="container"><div class="grid foot"><div><div class="brand"><span class="mark">U</span><span>UNIVISION<small>DESIGN & CONSTRUCTION LTD.</small></span></div><p>Building Today, Designing Tomorrow.</p><p>Your Vision. Our Expertise. Built to Last.</p></div><div><h4>Disciplines</h4><a href="#services">Architecture</a><br><a href="#services">Quantity Surveying</a><br><a href="#services">Civil Engineering</a><br><a href="#services">Construction</a></div><div><h4>Company</h4><a href="#about">About</a><br><a href="#projects">Projects</a><br><a href="#process">Process</a><br><a href="#packages">Packages</a></div><div><h4>Contact</h4><a href="tel:+220877708673">877708673</a><br><a href="tel:+220835925944">835925944</a><br><a href="tel:+220833046635">833046635</a><br><a href="tel:+220833775792">833775792</a></div></div><div class="bottom"><span>© 2026 Univision Design & Construction Ltd.</span><span>Building Today, Designing Tomorrow.</span></div></div></footer>
 
 <script>
+
 const projects=[
 {
 t:"Project 1 — Exterior 3D",
@@ -93,13 +123,13 @@ l:"Residential",
 s:"Exterior 3D",
 d:"Residential exterior 3D visualization project.",
 i:[
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_1.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_2.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_3.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_4.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_5.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_6.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_7.png"
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_1.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_2.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_3.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_4.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_5.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_6.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_7.png"
 ]
 },
 {
@@ -109,17 +139,17 @@ l:"Residential",
 s:"Exterior 3D",
 d:"Residential exterior 3D visualization project.",
 i:[
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_1.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_2.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_3.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_4.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_5.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_6.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_7.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_8.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_9.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_10.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_11.png"
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_1.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_2.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_3.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_4.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_5.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_6.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_7.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_8.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_9.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_10.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_11.png"
 ]
 },
 {
@@ -129,73 +159,162 @@ l:"Residential",
 s:"Exterior 3D",
 d:"Residential exterior 3D visualization project.",
 i:[
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_1.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_2.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_3.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_4.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_5.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_6.png",
-"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_7.png"
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_1.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_2.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_3.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_4.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_5.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_6.png",
+"/univision-website/Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_7.png"
 ]
 }
 ];
 
 const grid=document.getElementById("projectGrid");
 
-grid.innerHTML=projects.map((p,x)=>`<article class="project"><div class="slider" id="s${x}">${p.i.map((u,k)=>`<div class="slide ${k?'':'active'}"><img src="${u}" alt="${p.t} image ${k+1}" loading="${k?'lazy':'eager'}"></div>`).join("")}<button class="arr prev" onclick="slide(${x},-1)">‹</button><button class="arr next" onclick="slide(${x},1)">›</button><div class="dots">${p.i.map((_,k)=>`<i class="dot ${k?'':'active'}" onclick="go(${x},${k})"></i>`).join("")}</div><span class="count"><b id="c${x}">1</b> / ${p.i.length}</span></div><div class="pinfo"><span class="tag">${p.c}</span><span class="tag">${p.l}</span><h3>${p.t}</h3><p>${p.d}</p><p><b>Services:</b> ${p.s}</p><a style="color:#0759c9;font-weight:900" href="#contact">VIEW PROJECT →</a></div></article>`).join("");
+grid.innerHTML=projects.map((p,x)=>`
+<article class="project">
+<div class="slider" id="s${x}">
 
-function slide(x,d){
-const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],cur=a.findIndex(z=>z.classList.contains("active"));
-go(x,(cur+d+a.length)%a.length);
+${p.i.map((u,k)=>`
+<div class="slide ${k===0?'active':''}">
+<img src="${u}" alt="${p.t} image ${k+1}" loading="${k===0?'eager':'lazy'}">
+</div>
+`).join("")}
+
+<button class="arr prev" aria-label="Previous image" onclick="manualSlide(${x},-1)">‹</button>
+<button class="arr next" aria-label="Next image" onclick="manualSlide(${x},1)">›</button>
+
+<div class="dots">
+${p.i.map((_,k)=>`
+<span class="dot ${k===0?'active':''}" role="button" tabindex="0" aria-label="Go to image ${k+1}" onclick="manualGo(${x},${k})"></span>
+`).join("")}
+</div>
+
+<span class="count"><b id="c${x}">1</b> / ${p.i.length}</span>
+
+</div>
+
+<div class="pinfo">
+<span class="tag">${p.c}</span>
+<span class="tag">${p.l}</span>
+<h3>${p.t}</h3>
+<p>${p.d}</p>
+<p><b>Services:</b> ${p.s}</p>
+<a style="color:#0759c9;font-weight:900" href="#contact">VIEW PROJECT →</a>
+</div>
+
+</article>
+`).join("");
+
+const autoTimers={};
+const AUTO_DELAY=4000;
+
+function showSlide(x,n){
+const s=document.getElementById("s"+x);
+
+if(!s)return;
+
+const slides=[...s.querySelectorAll(".slide")];
+const dots=[...s.querySelectorAll(".dot")];
+
+if(!slides.length)return;
+
+n=(n+slides.length)%slides.length;
+
+slides.forEach((slide,index)=>{
+slide.classList.toggle("active",index===n);
+});
+
+dots.forEach((dot,index)=>{
+dot.classList.toggle("active",index===n);
+});
+
+const counter=document.getElementById("c"+x);
+
+if(counter){
+counter.textContent=n+1;
+}
+}
+
+function getCurrentSlide(x){
+const s=document.getElementById("s"+x);
+
+if(!s)return 0;
+
+const slides=[...s.querySelectorAll(".slide")];
+const current=slides.findIndex(slide=>slide.classList.contains("active"));
+
+return current>=0?current:0;
+}
+
+function slide(x,direction){
+const s=document.getElementById("s"+x);
+
+if(!s)return;
+
+const slides=[...s.querySelectorAll(".slide")];
+
+if(!slides.length)return;
+
+const current=getCurrentSlide(x);
+const next=current+direction;
+
+showSlide(x,next);
+resetAuto(x);
 }
 
 function go(x,n){
-const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],dots=[...s.querySelectorAll(".dot")];
-a.forEach((z,k)=>z.classList.toggle("active",k===n));
-dots.forEach((z,k)=>z.classList.toggle("active",k===n));
-document.getElementById("c"+x).textContent=n+1;
-resetAutoSlide(x);
+showSlide(x,n);
+resetAuto(x);
 }
 
-const autoSlideTimers={};
-const autoSlideDelay=4000;
+function manualSlide(x,direction){
+slide(x,direction);
+}
 
-function startAutoSlide(x){
-clearInterval(autoSlideTimers[x]);
+function manualGo(x,n){
+go(x,n);
+}
 
-autoSlideTimers[x]=setInterval(()=>{
+function startAuto(x){
+clearInterval(autoTimers[x]);
+
+autoTimers[x]=setInterval(()=>{
 const s=document.getElementById("s"+x);
 
-if(s.matches(":hover")) return;
+if(!s)return;
 
-const slides=[...s.querySelectorAll(".slide")];
-const current=slides.findIndex(z=>z.classList.contains("active"));
-const next=(current+1)%slides.length;
+if(s.matches(":hover"))return;
 
-goWithoutReset(x,next);
-},autoSlideDelay);
+const current=getCurrentSlide(x);
+
+showSlide(x,current+1);
+
+},AUTO_DELAY);
 }
 
-function resetAutoSlide(x){
-clearInterval(autoSlideTimers[x]);
+function resetAuto(x){
+clearInterval(autoTimers[x]);
 
-autoSlideTimers[x]=setTimeout(()=>{
-startAutoSlide(x);
-},autoSlideDelay);
-}
-
-function goWithoutReset(x,n){
-const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],dots=[...s.querySelectorAll(".dot")];
-
-a.forEach((z,k)=>z.classList.toggle("active",k===n));
-dots.forEach((z,k)=>z.classList.toggle("active",k===n));
-document.getElementById("c"+x).textContent=n+1;
+autoTimers[x]=setTimeout(()=>{
+startAuto(x);
+},AUTO_DELAY);
 }
 
 projects.forEach((_,x)=>{
-startAutoSlide(x);
+startAuto(x);
 });
 
-document.getElementById("quote").addEventListener("submit",e=>{e.preventDefault();const m=document.getElementById("msg");m.style.display="block";m.textContent="Thank you. Connect this form to your Odoo/WordPress/CRM form endpoint to receive enquiries."});
+document.getElementById("quote").addEventListener("submit",e=>{
+e.preventDefault();
+
+const m=document.getElementById("msg");
+
+m.style.display="block";
+m.textContent="Thank you. Connect this form to your Odoo/WordPress/CRM form endpoint to receive enquiries.";
+});
+
 </script>
-</body></html>
+</body>
+</html>
