@@ -17,7 +17,7 @@ header{position:sticky;top:0;z-index:50;background:#061d41f7;backdrop-filter:blu
 .about{grid-template-columns:1fr 1fr;align-items:center;gap:65px}.about-img{height:470px;border-radius:28px;background:linear-gradient(135deg,#061d41,#0d7bea);position:relative;overflow:hidden}.about-img:after{content:"";position:absolute;inset:18%;border:1px solid #ffffff55;transform:skewY(-8deg)}.note{position:absolute;left:22px;bottom:22px;background:#fff;padding:20px;border-radius:16px;max-width:300px;z-index:2}
 .cards4{grid-template-columns:repeat(4,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:27px}.card ul{padding:0;list-style:none}.card li{padding:6px 0;border-bottom:1px solid #edf0f5;font-size:.86rem}.card li:before{content:"✓";color:var(--g);font-weight:900;margin-right:8px}
 .why{grid-template-columns:repeat(4,1fr)}.why .card{padding:25px}.num{color:var(--g);font-weight:900;font-size:1.4rem}
-.projects{grid-template-columns:repeat(3,1fr)}.project{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}.slider{position:relative;aspect-ratio:16/10;background:#0b2a55}.slide{position:absolute;inset:0;opacity:0;transition:.3s}.slide.active{opacity:1}.slide img{width:100%;height:100%;object-fit:cover}.fallback{width:100%;height:100%;display:grid;place-items:center;color:#fff;font-weight:900}.arr{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:#061d41c7;color:#fff;font-size:1.5rem;z-index:3;cursor:pointer}.prev{left:10px}.next{right:10px}.count{position:absolute;right:10px;bottom:10px;background:#061d41cc;color:#fff;border-radius:20px;padding:4px 9px;font-size:.72rem;z-index:3}.dots{position:absolute;left:10px;bottom:13px;display:flex;gap:5px;z-index:3}.dot{width:7px;height:7px;border-radius:50%;background:#fff8}.dot.active{background:var(--g)}.pinfo{padding:22px}.tag{display:inline-block;background:#edf4ff;color:var(--b);font-weight:800;font-size:.7rem;padding:5px 9px;border-radius:99px;margin-right:5px}
+.projects{grid-template-columns:repeat(3,1fr)}.project{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}.slider{position:relative;aspect-ratio:16/10;background:#0b2a55}.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}.slide.active{opacity:1}.slide img{width:100%;height:100%;object-fit:cover}.fallback{width:100%;height:100%;display:grid;place-items:center;color:#fff;font-weight:900}.arr{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:#061d41c7;color:#fff;font-size:1.5rem;z-index:3;cursor:pointer}.prev{left:10px}.next{right:10px}.count{position:absolute;right:10px;bottom:10px;background:#061d41cc;color:#fff;border-radius:20px;padding:4px 9px;font-size:.72rem;z-index:3}.dots{position:absolute;left:10px;bottom:13px;display:flex;gap:5px;z-index:3}.dot{width:7px;height:7px;border-radius:50%;background:#fff8}.dot.active{background:var(--g)}.pinfo{padding:22px}.tag{display:inline-block;background:#edf4ff;color:var(--b);font-weight:800;font-size:.7rem;padding:5px 9px;border-radius:99px;margin-right:5px}
 .process{grid-template-columns:repeat(4,1fr);position:relative}.process:before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--g),var(--b))}.step{position:relative;z-index:1}.stepno{width:68px;height:68px;border:3px solid var(--g);border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:18px;box-shadow:0 0 0 9px var(--bg)}
 .prices{grid-template-columns:repeat(4,1fr)}.price{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px}.price.feature{border:2px solid var(--g)}.money{font-size:1.7rem;font-weight:900;color:var(--n);margin:12px 0}
 .team{grid-template-columns:repeat(4,1fr)}.person{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff}.photo{aspect-ratio:1;background:linear-gradient(135deg,#e3e9f0,#fafbfd);display:grid;place-items:center;text-align:center;color:#718096;font-weight:900}.pbody{padding:20px}.role{font-size:.72rem;color:var(--b);font-weight:900;text-transform:uppercase;letter-spacing:.1em}
@@ -86,13 +86,116 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 
 <script>
 const projects=[
-{t:"Modern Residential Villa",c:"Residential",l:"Gambia",s:"Architecture · Structural Design",d:"Contemporary residential concept focused on clean lines, functional planning and practical construction.",i:["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85","https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85"]},
-{t:"Contemporary Office Building",c:"Commercial",l:"Gambia",s:"Architecture · Civil Engineering",d:"Modern commercial concept balancing professional presentation, functionality and efficient planning.",i:["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85","https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"]},
-{t:"Residential Development",c:"Design",l:"Gambia",s:"Architecture · Quantity Surveying",d:"A coordinated design approach with attention to planning, quantities, cost awareness and buildability.",i:["https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=85","https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1400&q=85","https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85"]}];
+{
+t:"Project 1 — Exterior 3D",
+c:"Architectural · 3D Visualization",
+l:"Residential",
+s:"Exterior 3D",
+d:"Residential exterior 3D visualization project.",
+i:[
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_1.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_2.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_3.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_4.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_5.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_6.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project1_exterior%203Ds/Pjct1_ext_7.png"
+]
+},
+{
+t:"Project 2 — Exterior 3D",
+c:"Architectural · 3D Visualization",
+l:"Residential",
+s:"Exterior 3D",
+d:"Residential exterior 3D visualization project.",
+i:[
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_1.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_2.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_3.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_4.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_5.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_6.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_7.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_8.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_9.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_10.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project2_exterior%203Ds/Pjct1_ext_11.png"
+]
+},
+{
+t:"Project 3 — Exterior 3D",
+c:"Architectural · 3D Visualization",
+l:"Residential",
+s:"Exterior 3D",
+d:"Residential exterior 3D visualization project.",
+i:[
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_1.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_2.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_3.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_4.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_5.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_6.png",
+"Projects/Architectural/3D%20Visualization/Exterior%203D/Residential/Project3_exterior%203Ds/Pjct1_ext_7.png"
+]
+}
+];
+
 const grid=document.getElementById("projectGrid");
+
 grid.innerHTML=projects.map((p,x)=>`<article class="project"><div class="slider" id="s${x}">${p.i.map((u,k)=>`<div class="slide ${k?'':'active'}"><img src="${u}" alt="${p.t} image ${k+1}" loading="${k?'lazy':'eager'}"></div>`).join("")}<button class="arr prev" onclick="slide(${x},-1)">‹</button><button class="arr next" onclick="slide(${x},1)">›</button><div class="dots">${p.i.map((_,k)=>`<i class="dot ${k?'':'active'}" onclick="go(${x},${k})"></i>`).join("")}</div><span class="count"><b id="c${x}">1</b> / ${p.i.length}</span></div><div class="pinfo"><span class="tag">${p.c}</span><span class="tag">${p.l}</span><h3>${p.t}</h3><p>${p.d}</p><p><b>Services:</b> ${p.s}</p><a style="color:#0759c9;font-weight:900" href="#contact">VIEW PROJECT →</a></div></article>`).join("");
-function slide(x,d){const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],cur=a.findIndex(z=>z.classList.contains("active"));go(x,(cur+d+a.length)%a.length)}
-function go(x,n){const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],dots=[...s.querySelectorAll(".dot")];a.forEach((z,k)=>z.classList.toggle("active",k===n));dots.forEach((z,k)=>z.classList.toggle("active",k===n));document.getElementById("c"+x).textContent=n+1}
+
+function slide(x,d){
+const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],cur=a.findIndex(z=>z.classList.contains("active"));
+go(x,(cur+d+a.length)%a.length);
+}
+
+function go(x,n){
+const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],dots=[...s.querySelectorAll(".dot")];
+a.forEach((z,k)=>z.classList.toggle("active",k===n));
+dots.forEach((z,k)=>z.classList.toggle("active",k===n));
+document.getElementById("c"+x).textContent=n+1;
+resetAutoSlide(x);
+}
+
+const autoSlideTimers={};
+const autoSlideDelay=4000;
+
+function startAutoSlide(x){
+clearInterval(autoSlideTimers[x]);
+
+autoSlideTimers[x]=setInterval(()=>{
+const s=document.getElementById("s"+x);
+
+if(s.matches(":hover")) return;
+
+const slides=[...s.querySelectorAll(".slide")];
+const current=slides.findIndex(z=>z.classList.contains("active"));
+const next=(current+1)%slides.length;
+
+goWithoutReset(x,next);
+},autoSlideDelay);
+}
+
+function resetAutoSlide(x){
+clearInterval(autoSlideTimers[x]);
+
+autoSlideTimers[x]=setTimeout(()=>{
+startAutoSlide(x);
+},autoSlideDelay);
+}
+
+function goWithoutReset(x,n){
+const s=document.getElementById("s"+x),a=[...s.querySelectorAll(".slide")],dots=[...s.querySelectorAll(".dot")];
+
+a.forEach((z,k)=>z.classList.toggle("active",k===n));
+dots.forEach((z,k)=>z.classList.toggle("active",k===n));
+document.getElementById("c"+x).textContent=n+1;
+}
+
+projects.forEach((_,x)=>{
+startAutoSlide(x);
+});
+
 document.getElementById("quote").addEventListener("submit",e=>{e.preventDefault();const m=document.getElementById("msg");m.style.display="block";m.textContent="Thank you. Connect this form to your Odoo/WordPress/CRM form endpoint to receive enquiries."});
 </script>
 </body></html>
