@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Transparent or White Background -->
+  <rect width="512" height="512" fill="#ffffff"/>
+
+  <g transform="translate(256, 256)">
+    <!-- Main Outer Navy Hexagonal U-Shape -->
+    <path fill="#0F2042" d="
+      M -115,-140
+      L -76,-140
+      L -76,42
+      L 0,86
+      L 76,42
+      L 76,-140
+      L 115,-140
+      L 115,64
+      L 0,130
+      L -115,64
+      Z" />
+
+    <!-- Top Left Dark Charcoal Pillar -->
+    <polygon fill="#42454A" points="-47,-45 0,-72 0,-182 -47,-155" />
+
+    <!-- Top Right Gold Pillar -->
+    <polygon fill="#CBB078" points="0,-72 47,-45 47,-155 0,-182" />
+
+    <!-- Outer Navy Roof Arch -->
+    <polygon fill="#0F2042" points="0,-58 58,-16 48,-3 0,-38 -48,-3 -58,-16" />
+
+    <!-- Inner Gold Roof Accent -->
+    <polygon fill="#CBB078" points="0,-27 41,3 35,11 0,-14 -35,11 -41,3" />
+
+    <!-- 4 Center Gold Window Panes -->
+    <rect x="-14" y="21" width="11" height="11" fill="#CBB078" />
+    <rect x="3" y="21" width="11" height="11" fill="#CBB078" />
+    <rect x="-14" y="38" width="11" height="11" fill="#CBB078" />
+    <rect x="3" y="38" width="11" height="11" fill="#CBB078" />
+  </g>
+</svg>
