@@ -43,12 +43,17 @@ header{position:sticky;top:0;z-index:50;background:#061d41f7;backdrop-filter:blu
 
 .process{grid-template-columns:repeat(4,1fr);position:relative}.process:before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--g),var(--b))}.step{position:relative;z-index:1}.stepno{width:68px;height:68px;border:3px solid var(--g);border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:18px;box-shadow:0 0 0 9px var(--bg)}
 .prices{grid-template-columns:repeat(4,1fr)}.price{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;display:flex;flex-direction:column;gap:10px}.price .btn{margin-top:auto}.price.feature{border:2px solid var(--g)}.money{font-size:1.7rem;font-weight:900;color:var(--n);margin:12px 0}
-.team{grid-template-columns:repeat(4,1fr)}.person{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
-.photo-wrap{position:relative;width:100%;aspect-ratio:1;background:linear-gradient(135deg,#e3e9f0,#fafbfd);overflow:hidden}
-.photo-wrap img{width:100%;height:100%;object-fit:cover}
-.founder-badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);color:#fff;padding:4px 10px;border-radius:6px;font-size:0.65rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase}
+
+/* Updated Team Section Styles */
+.team{grid-template-columns:repeat(4,1fr)}
+.person{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.photo-wrap{position:relative;width:100%;aspect-ratio:4/4.5;background:linear-gradient(135deg,#f0f4f8,#e2e8f0);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.photo-wrap img{width:100%;height:100%;object-fit:contain;object-position:center bottom;}
 .pbody{padding:20px;display:flex;flex-direction:column;flex-grow:1}
-.role{font-size:.72rem;color:var(--b);font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.person-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px}
+.person h3{font-size:1.2rem;margin:0}
+.founder-tag{background:#edf4ff;color:var(--b);padding:2px 8px;border-radius:6px;font-size:0.6rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap}
+.role{font-size:.72rem;color:var(--b);font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
 .expertise-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:900;margin-top:auto;margin-bottom:8px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{background:#edf4ff;color:var(--b);font-size:.72rem;font-weight:700;padding:4px 8px;border-radius:6px}
@@ -167,10 +172,12 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
   <div class="person">
     <div class="photo-wrap">
       <img src="images/team/member-1.png" alt="Ousman Fatty">
-      <div class="founder-badge">Founder</div>
     </div>
     <div class="pbody">
-      <h3>Ousman Fatty</h3>
+      <div class="person-header">
+        <h3>Ousman Fatty</h3>
+        <span class="founder-tag">Founder</span>
+      </div>
       <div class="role">Architect</div>
       <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Ousman Fatty is an architect with 2+ years of professional experience across both office and site environments. He holds a Bachelor of Science in Architecture from Eastern Mediterranean University, with experience in architectural design, sustainable design, site planning, project management, site supervision and building analysis.</p>
       <div class="expertise-title">Expertise</div>
@@ -186,10 +193,12 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
   <div class="person">
     <div class="photo-wrap">
       <img src="images/team/member-2.png" alt="Kawsu Ndure">
-      <div class="founder-badge">Founder</div>
     </div>
     <div class="pbody">
-      <h3>Kawsu Ndure</h3>
+      <div class="person-header">
+        <h3>Kawsu Ndure</h3>
+        <span class="founder-tag">Founder</span>
+      </div>
       <div class="role">Architect</div>
       <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Kawsu Ndure is an architect with 6+ years of professional experience across both office and site environments. His experience spans architectural design, project supervision, site management, material coordination and technical coordination, providing a practical and technically focused approach to project delivery.</p>
       <div class="expertise-title">Expertise</div>
@@ -205,10 +214,12 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
   <div class="person">
     <div class="photo-wrap">
       <img src="images/team/member-3.png" alt="Omar Darboe">
-      <div class="founder-badge">Founder</div>
     </div>
     <div class="pbody">
-      <h3>Omar Darboe</h3>
+      <div class="person-header">
+        <h3>Omar Darboe</h3>
+        <span class="founder-tag">Founder</span>
+      </div>
       <div class="role">Quantity Surveyor</div>
       <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Omar Darboe is a quantity surveying professional with 5+ years of experience, including 3+ years of office-based experience and 2+ years of site experience. His expertise includes cost estimating, quantity take-offs, tender documentation, valuations, progress payments, final accounts, rate analysis and construction cost management.</p>
       <div class="expertise-title">Expertise</div>
@@ -224,10 +235,12 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
   <div class="person">
     <div class="photo-wrap">
       <img src="images/team/member-4.png" alt="Muhammed Lamin Ndow">
-      <div class="founder-badge">Founder</div>
     </div>
     <div class="pbody">
-      <h3>Muhammed Lamin Ndow</h3>
+      <div class="person-header">
+        <h3>Muhammed Lamin Ndow</h3>
+        <span class="founder-tag">Founder</span>
+      </div>
       <div class="role">Civil Engineer</div>
       <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Muhammed Lamin Ndow is a civil engineer with 2+ years of professional experience across both office and site environments. He holds a Bachelor of Science in Civil Engineering from Eastern Mediterranean University and has experience in project supervision, quality control, structural analysis and construction documentation.</p>
       <div class="expertise-title">Expertise</div>
