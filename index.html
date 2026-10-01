@@ -19,6 +19,11 @@ header{position:sticky;top:0;z-index:50;background:#061d41f7;backdrop-filter:blu
 .cards4{grid-template-columns:repeat(4,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:27px}.card ul{padding:0;list-style:none}.card li{padding:6px 0;border-bottom:1px solid #edf0f5;font-size:.86rem}.card li:before{content:"✓";color:var(--g);font-weight:900;margin-right:8px}
 .why{grid-template-columns:repeat(4,1fr)}.why .card{padding:25px}.num{color:var(--g);font-weight:900;font-size:1.4rem}
 
+.mission-grid{grid-template-columns:repeat(3,1fr)}
+.mission-grid .card ul{margin:10px 0 0}
+.mission-grid .card li{padding:4px 0;border:0;font-size:.85rem}
+.mission-grid .card li:before{content:"•";color:var(--b)}
+
 .projects{grid-template-columns:repeat(3,1fr)}
 .project{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
 .slider{position:relative;aspect-ratio:16/10;background:#0b2a55;overflow:hidden}
@@ -43,8 +48,8 @@ header{position:sticky;top:0;z-index:50;background:#061d41f7;backdrop-filter:blu
 .contact{grid-template-columns:.8fr 1.2fr}.panel{background:var(--n);color:#fff;border-radius:28px;padding:35px}.panel h2{color:#fff}.panel p{color:#ccd7e7}.panel b{color:#fff}.panel a{color:#fff}.panel p{color:#ccd7e7}.contactline{padding:13px 0;border-bottom:1px solid #ffffff18}.contactline a{color:#fff}form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 15px 40px #061d4112}.formgrid{grid-template-columns:1fr 1fr}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.8rem;font-weight:900}input,select,textarea{padding:12px;border:1px solid #d7dee8;border-radius:11px}textarea{min-height:130px}
 footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-columns:1.5fr 1fr 1fr 1fr}.foot a,.foot p{color:#c8d3e4;font-size:.88rem}.bottom{border-top:1px solid #ffffff18;margin-top:35px;padding-top:18px;color:#7f91ad;font-size:.75rem;display:flex;justify-content:space-between}
 
-@media(max-width:1050px){.links{gap:14px}.cards4,.prices,.team{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}.disc-grid{grid-template-columns:repeat(2,1fr)}.disc-item:nth-child(2){border-right:0}.process{grid-template-columns:repeat(2,1fr)}.process:before{display:none}.foot{grid-template-columns:1.5fr 1fr 1fr}}
-@media(max-width:760px){.section{padding:70px 0}.menu{display:block}.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--n);padding:20px 4%;flex-direction:column;align-items:stretch}.links.open{display:flex}.hero-inner,.about,.contact{grid-template-columns:1fr}.hero-inner{padding:75px 0}.visual{height:330px}.disc{margin-top:0;padding-top:15px}.disc-grid,.cards4,.prices,.team,.projects,.why,.process,.formgrid,.foot{grid-template-columns:1fr}.disc-item{border-right:0;border-bottom:1px solid var(--line)}.head{display:block}.head>div:last-child{margin-top:15px}.field.full{grid-column:auto}.bottom{display:block}.cta{padding:40px 25px}}
+@media(max-width:1050px){.links{gap:14px}.cards4,.prices,.team,.mission-grid{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}.disc-grid{grid-template-columns:repeat(2,1fr)}.disc-item:nth-child(2){border-right:0}.process{grid-template-columns:repeat(2,1fr)}.process:before{display:none}.foot{grid-template-columns:1.5fr 1fr 1fr}}
+@media(max-width:760px){.section{padding:70px 0}.menu{display:block}.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--n);padding:20px 4%;flex-direction:column;align-items:stretch}.links.open{display:flex}.hero-inner,.about,.contact{grid-template-columns:1fr}.hero-inner{padding:75px 0}.visual{height:330px}.disc{margin-top:0;padding-top:15px}.disc-grid,.cards4,.prices,.team,.projects,.why,.process,.formgrid,.foot,.mission-grid{grid-template-columns:1fr}.disc-item{border-right:0;border-bottom:1px solid var(--line)}.head{display:block}.head>div:last-child{margin-top:15px}.field.full{grid-column:auto}.bottom{display:block}.cta{padding:40px 25px}}
 </style>
 <base target="_blank">
 </head>
@@ -54,7 +59,7 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <header><div class="container nav">
 <a class="brand" href="#home"><img src="images/logo/univision-logo.png" alt="Univision Design & Construction Ltd."></a>
 <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-<nav class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#packages">Packages</a><a href="#contact">Contact</a><a class="btn primary" href="#contact">Request a Consultation</a></nav>
+<nav class="links"><a href="#about">About</a><a href="#mission">Identity</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#packages">Packages</a><a href="#contact">Contact</a><a class="btn primary" href="#contact">Request a Consultation</a></nav>
 </div></header>
 
 <section class="hero" id="home"><div class="container hero-inner">
@@ -74,7 +79,42 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <div><span class="ey">About Univision</span><h2>Building Today.<br>Designing Tomorrow.</h2><p>Univision Design & Construction Ltd. is a growing multidisciplinary built-environment practice bringing together architectural design, quantity surveying, civil engineering and construction expertise.</p><p>Our approach is simple: understand the project, coordinate the disciplines, consider the cost and develop practical solutions that can be built.</p><a class="btn dark" href="#team">Meet Our Team</a></div>
 </div></section>
 
-<section class="section alt" id="services"><div class="container"><div class="head"><div><span class="ey">Our expertise</span><h2>What We Do</h2></div><p></p></div>
+<!-- NEW VISION, MISSION & CORE VALUES SECTION -->
+<section class="section alt" id="mission">
+<div class="container">
+<div class="head">
+<div>
+<span class="ey">Our Core Identity</span>
+<h2>Vision, Mission & Core Values</h2>
+</div>
+<p>The foundational principles driving our multidisciplinary approach to every project.</p>
+</div>
+<div class="grid mission-grid">
+<article class="card">
+<div class="ico">👁</div>
+<h3>Our Vision</h3>
+<p>To be a premier multidisciplinary built-environment practice recognized for design excellence, cost transparency, engineering precision, and successful delivery.</p>
+</article>
+<article class="card">
+<div class="ico">🎯</div>
+<h3>Our Mission</h3>
+<p>To seamlessly integrate architecture, quantity surveying, civil engineering, and construction to deliver practical, buildable, and cost-effective solutions for every client.</p>
+</article>
+<article class="card">
+<div class="ico">⭐</div>
+<h3>Core Values</h3>
+<ul>
+<li><strong>Integrity:</strong> Honest and transparent professional advice.</li>
+<li><strong>Collaboration:</strong> Unified multidisciplinary teamwork.</li>
+<li><strong>Precision:</strong> Exact cost planning & structural detail.</li>
+<li><strong>Quality:</strong> Exceptional build standards and oversight.</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section" id="services"><div class="container"><div class="head"><div><span class="ey">Our expertise</span><h2>What We Do</h2></div><p></p></div>
 <div class="grid cards4">
 <article class="card"><div class="ico">⌂</div><h3>Architectural Design</h3><p>Thoughtful spaces designed around your vision, site and requirements.</p><ul><li>Concept Design</li><li>3D Visualization</li><li>Floor Plans</li><li>Construction Drawings</li><li>Permit-ready documentation</li></ul></article>
 <article class="card"><div class="ico">▣</div><h3>Quantity Surveying</h3><p>Accurate measurement, cost planning and financial information.</p><ul><li>BOQ</li><li>Quantity Measurement</li><li>Cost Planning</li><li>Cost Advice</li><li>Cost Control</li></ul></article>
@@ -82,10 +122,10 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <article class="card"><div class="ico">◆</div><h3>Construction & Delivery</h3><p>Coordinated implementation with attention to quality, cost and programme.</p><ul><li>Construction Coordination</li><li>Site Inspection</li><li>Project Coordination</li><li>Quality Monitoring</li><li>Progress Monitoring</li></ul></article>
 </div></div></section>
 
-<section class="section"><div class="container"><div class="head"><div><span class="ey">The Univision advantage</span><h2>Why One Multidisciplinary Team?</h2></div><p>Architecture, engineering and cost decisions work better when they are considered together.</p></div>
+<section class="section alt"><div class="container"><div class="head"><div><span class="ey">The Univision advantage</span><h2>Why One Multidisciplinary Team?</h2></div><p>Architecture, engineering and cost decisions work better when they are considered together.</p></div>
 <div class="grid why"><div class="card"><div class="num">01</div><h3>Better Coordination</h3><p>Connect architectural, engineering and cost considerations from the beginning.</p></div><div class="card"><div class="num">02</div><h3>Cost-Aware Design</h3><p>Consider design decisions alongside quantities and project costs.</p></div><div class="card"><div class="num">03</div><h3>Direct Professional Input</h3><p>Clients can work directly with the professionals involved in their project.</p></div><div class="card"><div class="num">04</div><h3>Practical Solutions</h3><p>Consider design, engineering, cost and buildability together.</p></div></div></div></section>
 
-<section class="section alt" id="projects">
+<section class="section" id="projects">
 <div class="container">
 <div class="head">
 <div>
@@ -98,13 +138,13 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 </div>
 </section>
 
-<section class="section" id="process"><div class="container"><div class="head"><div><span class="ey">How we work</span><h2>From Idea to Delivery</h2></div><p></p></div>
+<section class="section alt" id="process"><div class="container"><div class="head"><div><span class="ey">How we work</span><h2>From Idea to Delivery</h2></div><p></p></div>
 <div class="grid process"><div class="step"><div class="stepno">01</div><h3>Discover</h3><p>Understand requirements, site, objectives, budget and expectations.</p></div><div class="step"><div class="stepno">02</div><h3>Design</h3><p>Develop architectural concepts and coordinate technical requirements.</p></div><div class="step"><div class="stepno">03</div><h3>Plan</h3><p>Coordinate engineering documents, quantities, costs and construction planning.</p></div><div class="step"><div class="stepno">04</div><h3>Deliver</h3><p>Support implementation, inspections and project delivery as applicable.</p></div></div></div></section>
 
-<section class="section alt" id="packages"><div class="container"><div class="head"><div><span class="ey">Professional packages</span><h2>Services & Packages</h2></div><p></p></div>
+<section class="section" id="packages"><div class="container"><div class="head"><div><span class="ey">Professional packages</span><h2>Services & Packages</h2></div><p></p></div>
 <div class="grid prices"><div class="price feature"><h3>Architectural Drawing</h3><div class="money"><small>Per m²</small></div><p>Regular package & Premium package.</p><a class="btn dark" href="#contact">Enquire</a></div><div class="price"><h3>Structural Drawing</h3><div class="money"><small>Per m²</small></div><p>Regular package & Premium package</p><a class="btn dark" href="#contact">Enquire</a></div><div class="price"><h3>BOQ</h3><div class="money"><small>Per m²</small></div><p>Per Square Meter range fix rate</p><a class="btn dark" href="#contact">Request BOQ</a></div><div class="price"><h3>Site Inspection</h3><div class="money"> Per m²</div><p>Inspection, report, sketch plans and consultation.</p><a class="btn dark" href="#contact">Book Inspection</a></div></div></div></section>
 
-<section class="section" id="team"><div class="container"><div class="head"><div><span class="ey">The people behind the project</span><h2>Meet Our Team</h2></div><p></p></div>
+<section class="section alt" id="team"><div class="container"><div class="head"><div><span class="ey">The people behind the project</span><h2>Meet Our Team</h2></div><p></p></div>
 
 <div class="grid team"><div class="person"><img class="photo" src="images/team/member-1.png" alt="Ousman Fatty"><div class="pbody"><div class="role">Ousman Fatty</div><h3>Architect</h3><p>Ousman Fatty is an architecture professional focused on thoughtful design, practical solutions, and creating spaces that balance functionality, comfort, and visual appeal.</p></div></div><div class="person"><img class="photo" src="images/team/member-2.png" alt="Kawsu Ndure"><div class="pbody"><div class="role">Kawsu Ndure</div><h3>Architect</h3><p>Kawsu Ndure is an architecture professional with an interest in developing well-planned, functional, and visually engaging spaces tailored to each project's needs.</p></div></div><div class="person"><img class="photo" src="images/team/member-3.png" alt="Omar Darboe"><div class="pbody"><div class="role">Omar Darboe</div><h3>Quantity Surveyor</h3><p>Omar Darboe is a quantity surveying professional focused on cost planning, construction budgeting, and helping ensure projects are delivered efficiently and within established financial requirements.</p></div></div><div class="person"><img class="photo" src="images/team/member-4.png" alt="Muhammed Lamin Ndow"><div class="pbody"><div class="role">Muhammed Lamin Ndow</div><h3>Civil Engineer</h3><p>Muhammed Lamin Ndow is a civil engineering professional focused on practical construction solutions, structural considerations, and supporting the successful delivery of building and infrastructure projects.</p></div></div></div></div></section>
 
@@ -113,7 +153,7 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <section class="section alt" id="contact"><div class="container grid contact"><div class="panel"><span class="ey" style="color:#f0c45a">Contact Univision</span><h2>Let's Talk About Your Project.</h2><p>Whether you are developing an idea, preparing drawings, planning your budget or ready to build, talk to our multidisciplinary team.</p><div class="contactline"><b>+220 877708673</b></div><div class="contactline"><b>+220 835925944</b></div><div class="contactline"><b>+220 833046635</b></div><div class="contactline"><b>+220 833775792</b></div><div class="contactline"><a href="mailto:Univision0111@gmail.com"><b>Univision0111@gmail.com</b></a></div></div>
 <form id="quote" action="https://formsubmit.co/Univision0111@gmail.com" method="POST"><input type="hidden" name="_subject" value="New Project Enquiry — Univision Website"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="true"><div class="grid formgrid"><div class="field"><label>Full Name</label><input required name="name"></div><div class="field"><label>Phone</label><input required name="phone"></div><div class="field"><label>Email</label><input name="email" type="email"></div><div class="field"><label>Project Type</label><select name="type"><option>Residential</option><option>Commercial</option><option>Renovation</option><option>New Construction</option><option>Other</option></select></div><div class="field"><label>Service</label><select name="service"><option>Architecture</option><option>Quantity Surveying</option><option>Civil Engineering</option><option>Structural Design</option><option>BOQ</option><option>Construction</option><option>Site Inspection</option><option>Multiple Services</option></select></div><div class="field"><label>Location</label><input name="location"></div><div class="field full"><label>Project Description</label><textarea name="message"></textarea></div><div class="field full"><button class="btn dark" type="submit">Request a Consultation</button></div></div><p id="msg" style="display:none;color:#0759c9;font-weight:800"></p></form></div></section>
 
-<footer><div class="container"><div class="grid foot"><div><div class="brand"><span class="mark">U</span><span>UNIVISION<small>DESIGN & CONSTRUCTION LTD.</small></span></div><p>Building Today, Designing Tomorrow.</p><p>Your Vision. Our Expertise. Built to Last.</p></div><div><h4>Disciplines</h4><a href="#services">Architecture</a><br><a href="#services">Quantity Surveying</a><br><a href="#services">Civil Engineering</a><br><a href="#services">Construction</a></div><div><h4>Company</h4><a href="#about">About</a><br><a href="#projects">Projects</a><br><a href="#process">Process</a><br><a href="#packages">Packages</a></div><div><h4>Contact</h4><a href="tel:+220877708673">+220 877708673</a><br><a href="tel:+220835925944">+220 835925944</a><br><a href="tel:+220833046635">+220 833046635</a><br><a href="tel:+220833775792">+220 833775792</a><br><a href="mailto:Univision0111@gmail.com">Univision0111@gmail.com</a></div></div><div class="bottom"><span>© 2026 Univision Design & Construction Ltd.</span><span>Building Today, Designing Tomorrow.</span></div></div></footer>
+<footer><div class="container"><div class="grid foot"><div><div class="brand"><span class="mark">U</span><span>UNIVISION<small>DESIGN & CONSTRUCTION LTD.</small></span></div><p>Building Today, Designing Tomorrow.</p><p>Your Vision. Our Expertise. Built to Last.</p></div><div><h4>Disciplines</h4><a href="#services">Architecture</a><br><a href="#services">Quantity Surveying</a><br><a href="#services">Civil Engineering</a><br><a href="#services">Construction</a></div><div><h4>Company</h4><a href="#about">About</a><br><a href="#mission">Identity</a><br><a href="#projects">Projects</a><br><a href="#process">Process</a><br><a href="#packages">Packages</a></div><div><h4>Contact</h4><a href="tel:+220877708673">+220 877708673</a><br><a href="tel:+220835925944">+220 835925944</a><br><a href="tel:+220833046635">+220 833046635</a><br><a href="tel:+220833775792">+220 833775792</a><br><a href="mailto:Univision0111@gmail.com">Univision0111@gmail.com</a></div></div><div class="bottom"><span>© 2026 Univision Design & Construction Ltd.</span><span>Building Today, Designing Tomorrow.</span></div></div></footer>
 
 <script>
 
