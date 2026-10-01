@@ -43,7 +43,16 @@ header{position:sticky;top:0;z-index:50;background:#061d41f7;backdrop-filter:blu
 
 .process{grid-template-columns:repeat(4,1fr);position:relative}.process:before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--g),var(--b))}.step{position:relative;z-index:1}.stepno{width:68px;height:68px;border:3px solid var(--g);border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:18px;box-shadow:0 0 0 9px var(--bg)}
 .prices{grid-template-columns:repeat(4,1fr)}.price{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;display:flex;flex-direction:column;gap:10px}.price .btn{margin-top:auto}.price.feature{border:2px solid var(--g)}.money{font-size:1.7rem;font-weight:900;color:var(--n);margin:12px 0}
-.team{grid-template-columns:repeat(4,1fr)}.person{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff}.photo{aspect-ratio:1;background:linear-gradient(135deg,#e3e9f0,#fafbfd);display:grid;place-items:center;text-align:center;color:#718096;font-weight:900}.pbody{padding:20px}.role{font-size:.72rem;color:var(--b);font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.team{grid-template-columns:repeat(4,1fr)}.person{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.photo-wrap{position:relative;width:100%;aspect-ratio:1;background:linear-gradient(135deg,#e3e9f0,#fafbfd);overflow:hidden}
+.photo-wrap img{width:100%;height:100%;object-fit:cover}
+.founder-badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);color:#fff;padding:4px 10px;border-radius:6px;font-size:0.65rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase}
+.pbody{padding:20px;display:flex;flex-direction:column;flex-grow:1}
+.role{font-size:.72rem;color:var(--b);font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.expertise-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:900;margin-top:auto;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#edf4ff;color:var(--b);font-size:.72rem;font-weight:700;padding:4px 8px;border-radius:6px}
+
 .cta{background:linear-gradient(135deg,var(--n),#0a4d9f);color:#fff;border-radius:30px;padding:55px}.cta p{color:#d7e0ee;max-width:700px}
 .contact{grid-template-columns:.8fr 1.2fr}.panel{background:var(--n);color:#fff;border-radius:28px;padding:35px}.panel h2{color:#fff}.panel p{color:#ccd7e7}.panel b{color:#fff}.panel a{color:#fff}.panel p{color:#ccd7e7}.contactline{padding:13px 0;border-bottom:1px solid #ffffff18}.contactline a{color:#fff}form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 15px 40px #061d4112}.formgrid{grid-template-columns:1fr 1fr}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.8rem;font-weight:900}input,select,textarea{padding:12px;border:1px solid #d7dee8;border-radius:11px}textarea{min-height:130px}
 footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-columns:1.5fr 1fr 1fr 1fr}.foot a,.foot p{color:#c8d3e4;font-size:.88rem}.bottom{border-top:1px solid #ffffff18;margin-top:35px;padding-top:18px;color:#7f91ad;font-size:.75rem;display:flex;justify-content:space-between}
@@ -144,9 +153,95 @@ footer{background:#03142e;color:#fff;padding:55px 0 20px}.foot{grid-template-col
 <section class="section" id="packages"><div class="container"><div class="head"><div><span class="ey">Professional packages</span><h2>Services & Packages</h2></div><p></p></div>
 <div class="grid prices"><div class="price feature"><h3>Architectural Drawing</h3><div class="money"><small>Per m²</small></div><p>Regular package & Premium package.</p><a class="btn dark" href="#contact">Enquire</a></div><div class="price"><h3>Structural Drawing</h3><div class="money"><small>Per m²</small></div><p>Regular package & Premium package</p><a class="btn dark" href="#contact">Enquire</a></div><div class="price"><h3>BOQ</h3><div class="money"><small>Per m²</small></div><p>Per Square Meter range fix rate</p><a class="btn dark" href="#contact">Request BOQ</a></div><div class="price"><h3>Site Inspection</h3><div class="money"> Per m²</div><p>Inspection, report, sketch plans and consultation.</p><a class="btn dark" href="#contact">Book Inspection</a></div></div></div></section>
 
-<section class="section alt" id="team"><div class="container"><div class="head"><div><span class="ey">The people behind the project</span><h2>Meet Our Team</h2></div><p></p></div>
+<section class="section alt" id="team">
+<div class="container">
+<div class="head">
+<div>
+<span class="ey">Our Founders</span>
+<h2>The team behind Univision.</h2>
+</div>
+<p>Four complementary disciplines brought together through architecture, engineering, quantity surveying and construction expertise.</p>
+</div>
 
-<div class="grid team"><div class="person"><img class="photo" src="images/team/member-1.png" alt="Ousman Fatty"><div class="pbody"><div class="role">Ousman Fatty</div><h3>Architect</h3><p>Ousman Fatty is an architecture professional focused on thoughtful design, practical solutions, and creating spaces that balance functionality, comfort, and visual appeal.</p></div></div><div class="person"><img class="photo" src="images/team/member-2.png" alt="Kawsu Ndure"><div class="pbody"><div class="role">Kawsu Ndure</div><h3>Architect</h3><p>Kawsu Ndure is an architecture professional with an interest in developing well-planned, functional, and visually engaging spaces tailored to each project's needs.</p></div></div><div class="person"><img class="photo" src="images/team/member-3.png" alt="Omar Darboe"><div class="pbody"><div class="role">Omar Darboe</div><h3>Quantity Surveyor</h3><p>Omar Darboe is a quantity surveying professional focused on cost planning, construction budgeting, and helping ensure projects are delivered efficiently and within established financial requirements.</p></div></div><div class="person"><img class="photo" src="images/team/member-4.png" alt="Muhammed Lamin Ndow"><div class="pbody"><div class="role">Muhammed Lamin Ndow</div><h3>Civil Engineer</h3><p>Muhammed Lamin Ndow is a civil engineering professional focused on practical construction solutions, structural considerations, and supporting the successful delivery of building and infrastructure projects.</p></div></div></div></div></section>
+<div class="grid team">
+  <div class="person">
+    <div class="photo-wrap">
+      <img src="images/team/member-1.png" alt="Ousman Fatty">
+      <div class="founder-badge">Founder</div>
+    </div>
+    <div class="pbody">
+      <h3>Ousman Fatty</h3>
+      <div class="role">Architect</div>
+      <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Ousman Fatty is an architect with 2+ years of professional experience across both office and site environments. He holds a Bachelor of Science in Architecture from Eastern Mediterranean University, with experience in architectural design, sustainable design, site planning, project management, site supervision and building analysis.</p>
+      <div class="expertise-title">Expertise</div>
+      <div class="chips">
+        <span class="chip">Architectural Design</span>
+        <span class="chip">Sustainable Design</span>
+        <span class="chip">Project Management</span>
+        <span class="chip">Site Supervision</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="photo-wrap">
+      <img src="images/team/member-2.png" alt="Kawsu Ndure">
+      <div class="founder-badge">Founder</div>
+    </div>
+    <div class="pbody">
+      <h3>Kawsu Ndure</h3>
+      <div class="role">Architect</div>
+      <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Kawsu Ndure is an architect with 6+ years of professional experience across both office and site environments. His experience spans architectural design, project supervision, site management, material coordination and technical coordination, providing a practical and technically focused approach to project delivery.</p>
+      <div class="expertise-title">Expertise</div>
+      <div class="chips">
+        <span class="chip">Architectural Design</span>
+        <span class="chip">Project Supervision</span>
+        <span class="chip">Site Management</span>
+        <span class="chip">Technical Coordination</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="photo-wrap">
+      <img src="images/team/member-3.png" alt="Omar Darboe">
+      <div class="founder-badge">Founder</div>
+    </div>
+    <div class="pbody">
+      <h3>Omar Darboe</h3>
+      <div class="role">Quantity Surveyor</div>
+      <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Omar Darboe is a quantity surveying professional with 5+ years of experience, including 3+ years of office-based experience and 2+ years of site experience. His expertise includes cost estimating, quantity take-offs, tender documentation, valuations, progress payments, final accounts, rate analysis and construction cost management.</p>
+      <div class="expertise-title">Expertise</div>
+      <div class="chips">
+        <span class="chip">Cost Estimation</span>
+        <span class="chip">Quantity Take-offs</span>
+        <span class="chip">Tender Documentation</span>
+        <span class="chip">Construction Cost Management</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="photo-wrap">
+      <img src="images/team/member-4.png" alt="Muhammed Lamin Ndow">
+      <div class="founder-badge">Founder</div>
+    </div>
+    <div class="pbody">
+      <h3>Muhammed Lamin Ndow</h3>
+      <div class="role">Civil Engineer</div>
+      <p style="font-size:0.86rem; color:#42506a; margin-bottom:15px;">Muhammed Lamin Ndow is a civil engineer with 2+ years of professional experience across both office and site environments. He holds a Bachelor of Science in Civil Engineering from Eastern Mediterranean University and has experience in project supervision, quality control, structural analysis and construction documentation.</p>
+      <div class="expertise-title">Expertise</div>
+      <div class="chips">
+        <span class="chip">Civil Engineering</span>
+        <span class="chip">Project Supervision</span>
+        <span class="chip">Structural Analysis</span>
+        <span class="chip">Construction Management</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
 <section class="section"><div class="container"><div class="cta"><span class="ey" style="color:#f0c45a">Start a conversation</span><h2 style="color:#ffffff">Have a Project in Mind?</h2><p>Let's discuss your idea and determine the right professional approach for your project.</p><a class="btn primary" href="#contact">Start Your Project</a></div></div></section>
 
